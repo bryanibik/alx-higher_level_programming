@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    """ Add all arguments."""
-    import sys
+from sys import argv
+if __name__ == '__main__':
+    res = 0
+    cnt = 1
 
-    result = 0
-
-    for i in range(len(sys.argv) - 1):
-        result += (int(sys.argv[i + 1]))
-    print("{:d}".format(result))
+    while cnt < len(argv):
+        res += int(argv[cnt])
+        cnt += 1
+    print(res)
